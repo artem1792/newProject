@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>newProject</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
 </head>
 <body class="flex flex-col min-h-screen">
     <header class="bg-sky-200 p-4">
@@ -15,10 +15,10 @@
             <nav>
                 <ul class="flex gap-4">
                     <li>
-                        <a href="{{ route('home') }}" class="text-xl font-bold">Главная</a>
+                        <a href="<?php echo e(route('home')); ?>" class="text-xl font-bold">Главная</a>
                     </li>
                     <li>
-                        <a href="{{ route('array') }}" class="text-xl font-bold">Массивы</a>
+                        <a href="<?php echo e(route('array')); ?>" class="text-xl font-bold">Массивы</a>
                     </li>
                 </ul>
             </nav>
@@ -32,4 +32,4 @@
         © Бобровский Артём, 2026г.
     </footer>
 </body>
-</html>
+</html><?php /**PATH D:\xampp\htdocs\newProject\resources\views/home.blade.php ENDPATH**/ ?>
